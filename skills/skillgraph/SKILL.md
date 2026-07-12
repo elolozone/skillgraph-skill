@@ -4,8 +4,9 @@ description: >-
   Find the best Claude Agent Skill for any task. Searches the /skillgraph index
   (thousands of public SKILL.md skills) through its MCP server, ranks by
   relevance, and returns install commands plus safety flags. Use it whenever the
-  user asks "is there a skill for X?", types "/skillgraph <query>", or needs a
-  capability they don't yet have installed (PDF, slides, code review, data, …).
+  user asks whether a skill exists for something, runs the /skillgraph command
+  with a query, or needs a capability they don't yet have installed (PDF, slides,
+  code review, data, and more).
 ---
 
 # skillgraph — trouve le meilleur skill
@@ -15,17 +16,18 @@ Skills », via son **serveur MCP distant**. Il permet de découvrir le bon skill
 une tâche, puis de l'installer — après relecture.
 
 ## Quand l'utiliser
-- L'utilisateur tape `/skillgraph <requête>`.
+- L'utilisateur tape la commande `/skillgraph` suivie de sa requête.
 - L'utilisateur demande « existe-t-il un skill pour… », « quel skill pour… ».
 - Une tâche nécessite une capacité non installée (manipuler un PDF, générer une
   présentation, auditer un dépôt, données publiques françaises, comptabilité…).
 
-## Prérequis — ajouter le serveur MCP (une seule fois)
+## Prérequis — le serveur MCP
+Ce skill est distribué en **plugin** : le serveur MCP `skillgraph` est configuré
+automatiquement à l'installation du plugin (voir `.mcp.json`). Si tu l'installes
+seul (hors plugin), ajoute le serveur MCP une fois :
 ```bash
 claude mcp add --transport http skillgraph https://skillgraph.info/mcp/
 ```
-Ou, en configuration projet, un fichier `.mcp.json` (voir le dépôt) pointant sur
-`https://skillgraph.info/mcp/` (transport HTTP). Aucune authentification.
 
 ## Outils MCP disponibles
 - `search_skills(query, limit=8, france=false)` — cherche les meilleurs skills pour

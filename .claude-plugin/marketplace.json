@@ -1,0 +1,16 @@
+{
+  "name": "skillgraph",
+  "description": "Trouve le meilleur Claude skill via /skillgraph (recherche + MCP).",
+  "owner": {
+    "name": "Culture Startup",
+    "email": "laurent@culturestartup.io"
+  },
+  "plugins": [
+    {
+      "name": "skillgraph",
+      "source": "./",
+      "description": "Cherche le meilleur skill pour une tâche via /skillgraph : recherche sémantique, commande d'installation et niveau de risque. Inclut le serveur MCP skillgraph.",
+      "version": "1.0.0"
+    }
+  ]
+}
