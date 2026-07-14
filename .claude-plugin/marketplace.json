@@ -9,8 +9,8 @@
     {
       "name": "skillgraph",
       "source": "./",
-      "description": "Cherche le meilleur skill pour une tâche via /skillgraph : recherche sémantique, commande d'installation et niveau de risque. Inclut le serveur MCP skillgraph.",
-      "version": "1.0.0"
+      "description": "Cherche le meilleur skill pour une tâche via /skillgraph (recherche sémantique, install, niveau de risque) — ou le parcours de compétences d'un métier (persona). Inclut le serveur MCP skillgraph.",
+      "version": "1.1.0"
     }
   ]
 }

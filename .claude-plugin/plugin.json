@@ -1,7 +1,7 @@
 {
   "name": "skillgraph",
-  "description": "Le skill qui trouve les skills : recherche /skillgraph depuis ton agent via MCP. /skillgraph suivi d'une requête → meilleur skill + commande d'installation + niveau de risque.",
-  "version": "1.0.0",
+  "description": "Le skill qui trouve les skills : recherche /skillgraph depuis ton agent via MCP. Une requête → meilleur skill + install + niveau de risque ; ou par métier → le parcours de compétences (persona) phase par phase.",
+  "version": "1.1.0",
   "author": {
     "name": "Culture Startup",
     "email": "laurent@culturestartup.io"

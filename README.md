@@ -31,9 +31,15 @@ clique **Synchro**, puis installe le plugin **skillgraph**.
 ```
 /skillgraph extraire les tableaux d'un PDF
 /skillgraph un skill pour la comptabilité française
+/skillgraph quels skills pour un product manager ?     # ← par métier
 ```
 L'agent appelle l'outil MCP `search_skills`, classe les résultats par pertinence, et
 te montre les meilleurs avec `security_level` (niveau de risque) et `review_flags`.
+
+**Par métier :** demande « quels skills pour un comptable / un DevOps / un freelance ? »
+et l'agent utilise `list_personas` + `skill_journey` pour te dérouler le **parcours de
+compétences** du métier — ses phases de travail dans l'ordre, avec les bons skills à
+chacune.
 
 ## Contenu du plugin
 ```
@@ -50,6 +56,8 @@ skills/skillgraph/
 |------|------|
 | `search_skills(query, limit, france)` | Recherche sémantique + mots-clés (réécriture LLM des requêtes en langage naturel). `france=true` privilégie les skills adaptés au contexte français. |
 | `get_skill(id)` | Fiche détaillée : résumé, dépôt, licence, note de sécurité, install. |
+| `list_personas()` | Les profils métier disponibles (comptable, product manager, DevOps…) avec leur nombre de skills. |
+| `skill_journey(persona)` | Le parcours de compétences d'un métier : phases de travail (dans l'ordre) → activités → meilleurs skills. |
 
 ## Sécurité
 Ce plugin **ne fait qu'aider à trouver** ; il **n'installe rien automatiquement**. Un
